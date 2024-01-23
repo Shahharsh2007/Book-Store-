@@ -1,0 +1,395 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    text-align: center;
+    padding: 20px;
+    background-color:  #f8f9fa;
+    font-family:'Philosopher', sans-serif;
+}
+
+.logo{
+    size: 10px;
+    border: 10px, solid,#860000;
+}
+
+.book-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.book-card{
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    width: calc(33.33% - 20px); 
+    box-shadow: 0 2px 5px 0 rgba(116, 1, 1, 0.3);
+    transition: box-shadow 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+
+.book-card:hover{
+    box-shadow: 0 2px 10px rgba(184, 3, 3, 0.849);
+}
+
+.book-card img{
+    width: 100%;
+    height: auto;
+}
+
+.book-price{
+    font-weight: bold;
+    color: rgb(129, 3, 3);
+}
+
+.cart{
+    position: relative;
+    top: 20px;
+    right: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(184, 3, 3, 0.849);
+    border-radius: 25px;
+    margin: 20px auto;
+}
+
+.cart h2{
+    text-align: center;
+    color: #830404;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#cart-items{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-items li{
+    padding: 10px;
+    border-bottom: 1px solid;
+    color: black;
+}
+
+.book-card h2{
+    color: #830404;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.book-card p{
+    font-weight: bold;
+    font-family: 'Salsa', cursive;
+}
+
+.total-price{
+    margin-top: 15px;
+    font-size: 1.4em;
+    
+    text-align: left;
+    font-family:'VT323', monospace;;
+}
+
+.fancy-message{
+    text-align: center;
+    font-family: 'Tangerine', cursive;
+    font-size: 25px;
+    font-weight: bolder;
+    color: #830404;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #880303;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family:'Philosopher', sans-serif;
+    font-weight: bolder;
+    font-size: large;
+}
+
+button:hover {
+    background-color: red;
+}
+
+.name-input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #db0808;
+    font-family: 'Bitter', serif;
+    font-weight: bolder;
+    color: #db0808;
+  
+}
+
+
+a{
+    color: white;
+}
+
+a :visited{
+    color: yellow;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around   ;
+    align-items: center;
+    background-color: #830404;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.logo-header img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.Social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a, .Social-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #830404; /* Set the default background color */
+    padding: 10px; /* Add padding for better visibility */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    transition: color 0.3s ease, background-color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover, .Social-links a:hover {
+    color: red;
+    background-color: white; /* Change the background color on hover */
+    text-shadow: 0 0 10px red; /* Add a glow effect */
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    z-index: 2;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.overlay-blur {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+    backdrop-filter: blur(5px);
+}
+
+.modal button {
+    background-color: #810404;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: red;
+}
+.bill-container {
+    max-width: 500px;
+    margin: 0 auto;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.bill-header {
+    text-align: center;
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+.bill-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.bill-item span {
+    flex: 1;
+    font-size: 1.2em;
+}
+.bill-total {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.green-text {
+    color: green;
+}
+.red-text {
+    color: red;
+}
+.thank-you-screen {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 3;
+    backdrop-filter: blur(5px);
+}
+button, .overlay-blur button, .reshop-button {
+    background-color: #880303;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: bolder;
+    font-size: large;
+}
+
+button:hover, .overlay-blur button:hover, .reshop-button:hover {
+    background-color: red;
+}
+
+
+.thank-you-message {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+
+.blur-background {
+    filter: blur(5px);
+}
+
+/* New styles for the review section */
+.review-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #860000;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    
+}
+.review-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+.review-section form {
+    display: grid;
+    gap: 10px;
+    border-radius: 20px;
+}
+.review-section label {
+    font-weight: bold;
+}
+.review-section textarea {
+    resize: vertical;
+    border-radius: 20PX;
+}
+#reviews-container {
+    margin-top: 20px;
+    border-radius: 20px;
+}
+#reviews-container div {
+    margin-bottom: 15px;
+    border-radius: 20px;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.information {
+    background-color: #ffcccc; /* Set a red background color */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Philosopher', sans-serif; /* Use a good font */
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+.information p {
+    margin-bottom: 10px;
+}
+
+.information a{
+    color: rgb(98, 11, 11) !important;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Increase the size on hover for a subtle effect */
+}
+
+.header b{
+    color: #810404;
+    background-color: white;
+}
